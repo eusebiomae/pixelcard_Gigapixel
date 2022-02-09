@@ -1,0 +1,71 @@
+/* ------------------------
+# Service
+------------------------*/
+.xg-service{
+
+  .xg-service-item{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+    img{
+      -webkit-transition: opacity 1s,-webkit-transform 1s;
+      transition: transform 1s, opacity 1s;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      will-change: transform, opacity;
+    }
+
+    .xg-service-content{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      padding: 30px;
+      text-align: center;
+      -webkit-box-shadow: inset 0 0 0 1px #d6d6d6;
+      box-shadow: inset 0 0 0 1px #d6d6d6;
+      background: #fff;
+      @include transition();
+      @include flexbox();
+      @include flex-direction(column);
+      @include justify-content(center);
+
+      i::before{
+        font-size: 48px;
+        @include transition();
+      }
+
+      h4{
+        @include transition();
+      }
+    }
+
+    &:hover{
+      .xg-service-content{
+        background: rgba(0, 0, 0, 0.5);
+
+        i::before{
+          color: #fff;
+        }
+
+        h4{
+          color: #fff;
+        }
+      }
+
+      img{
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,434 @@
+/* ------------------------
+# Body
+------------------------*/
+/* -------- Google Font -------- */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap');
+
+body {
+   font-family: $font;
+   font-style: normal;
+   font-size: 16px;
+   line-height: 1.6;
+   color: $t_color;
+   overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+   margin-bottom: 20px;
+   font-weight: 700;
+   line-height: 1.5;
+}
+
+h1,
+.h1 {
+   font-size: 60px;
+   line-height: 70px;
+}
+
+h2,
+.h2 {
+   font-size: 36px;
+   line-height: 50px;
+}
+
+h3,
+.h3 {
+   font-size: 30px;
+   line-height: 40px;
+}
+
+h4,
+.h4 {
+   font-size: 24px;
+   line-height: 34px;
+}
+
+h5,
+.h5 {
+   font-size: 20px;
+   line-height: 27px;
+}
+
+h6,
+.h6 {
+   font-size: 18px;
+   line-height: 28px;
+}
+
+h4,
+h5,
+h6,
+.h4,
+.h5,
+.h6 {
+   font-weight: 500;
+}
+
+p {
+   color: $light_t_color;
+   line-height: 1.6;
+   font-weight: 400;
+   margin-bottom: 20px;
+}
+
+ul {
+   margin: 0;
+   padding: 0;
+}
+
+img{
+   max-width: 100%;
+}
+
+.text-large {
+   font-size: 120%;
+}
+
+.text-small {
+   font-size: 80%;
+}
+
+a {
+   color: $t_color;
+}
+
+a:hover {
+   color: #f85438;
+   text-decoration: none;
+}
+
+a:focus {
+   outline: none;
+}
+
+a:focus,
+:active,
+:after {
+   outline: none;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+   background: none;
+   color: inherit
+}
+
+input:focus,
+textarea:focus {
+   outline: none;
+   box-shadow: none;
+}
+.form-group{
+   margin-bottom: 20px;
+}
+.form-control {
+   height: auto;
+   padding: 10px 20px;
+   line-height: 1.4;
+   color: $light_t_color;
+   background-color: #fff;
+   border-radius: 0;
+   outline: none;
+
+   &:focus{
+      box-shadow: none;
+      border-color: $p_color;
+   }
+}
+
+button,
+button:focus{
+   outline: none;
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after{
+   margin-left: 0;
+}
+
+.blockquote {
+   margin-top: 70px;
+   margin-bottom: 65px;
+   font-size: 1.875rem;
+   line-height: 1.4;
+   padding-left: 30px;
+   border-left: 3px solid $p_color;
+
+   @media #{$max991} {
+      margin-top: 50px;
+      margin-bottom: 45px;
+   }
+   @media #{$max767} {
+      font-size: 1.5rem;
+   }
+   @media #{$max375} {
+      font-size: 1.2rem;
+   }
+
+   p{
+      margin-bottom: 0;
+      line-height: 1.4;
+   }
+
+   footer {
+      margin-top: 2.5rem;
+      position: relative;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #999;
+
+      &:before {
+         content: "";
+         display: block;
+         width: 1.875rem;
+         height: 1px;
+         background: #a7a9b8;
+         position: absolute;
+         top: -1.25rem;
+         left: 0;
+      }
+   }
+}
+/* ------------------------
+# Transition
+------------------------*/
+
+a,
+img{
+   -webkit-transition: all 0.5s ease-in-out 0s;
+   -moz-transition: all 0.5s ease-in-out 0s;
+   -o-transition: all 0.5s ease-in-out 0s;
+   transition: all 0.5s ease-in-out 0s;
+}
+
+.hover-zoom:hover {
+   -webkit-transform: scale(1.1);
+   -moz-transform: scale(1.1);
+   transform: scale(1.1);
+}
+
+
+/* ------------------------
+# Font Weight
+------------------------*/
+
+.font-w-3 {
+   font-weight: 300;
+}
+
+.font-w-3i {
+   font-weight: 300;
+   font-style: italic;
+}
+
+.font-w-4 {
+   font-weight: 400;
+}
+
+.font-w-4i {
+   font-weight: 400;
+   font-style: italic;
+}
+
+.font-w-5 {
+   font-weight: 500;
+}
+
+.font-w-6 {
+   font-weight: 600;
+}
+
+.font-w-7 {
+   font-weight: 700;
+}
+
+.font-w-8 {
+   font-weight: 800;
+}
+
+.line-h-normal {
+   line-height: normal;
+}
+
+.line-h-1 {
+   line-height: 1.5;
+}
+
+.line-h-2 {
+   line-height: 1.6;
+}
+
+.line-h-3 {
+   line-height: 1.7;
+}
+
+.line-h-4 {
+   line-height: 1.8;
+}
+
+.line-h-5 {
+   line-height: 1.9;
+}
+
+.letter-space-1 {
+   letter-spacing: 2px;
+}
+
+.letter-space-2 {
+   letter-spacing: 4px;
+}
+
+.letter-space-3 {
+   letter-spacing: 6px;
+}
+
+.letter-space-4 {
+   letter-spacing: 8px;
+}
+
+.letter-space-5 {
+   letter-spacing: 10px;
+}
+
+
+/* ------------------------
+# Alignment
+------------------------*/
+.left-0 {
+   left: 0;
+}
+
+.right-0 {
+   right: 0;
+}
+
+.top-0 {
+   top: 0;
+}
+
+.bottom-0 {
+   bottom: 0;
+}
+
+.left-50 {
+   left: 50%;
+   transform: translateX(-50%);
+   -webkit-transform: translateX(-50%);
+   -o-transform: translateX(-50%);
+   -ms-transform: translateX(-50%);
+   -moz-transform: translateX(-50%);
+}
+
+.top-50 {
+   top: 50%;
+   transform: translateY(-50%);
+   -webkit-transform: translateY(-50%);
+   -o-transform: translateY(-50%);
+   -ms-transform: translateY(-50%);
+   -moz-transform: translateY(-50%);
+}
+
+
+/* ------------------------
+# Text Color
+------------------------*/
+.text-dark {
+   color: $t_color;
+}
+
+.text-primary {
+   color: $s_color;
+}
+
+.text-color {
+   color: $light_t_color;
+}
+
+
+/* ------------------------
+# Background
+------------------------*/
+.bg-primary {
+   background-color: $p_color;
+}
+
+.bg-light {
+   background: #efe8ef;
+}
+
+.bg-black {
+   background-color: #111
+}
+
+.bg-light-body {
+   background-color: #f5f5f5
+}
+
+.bg-dark {
+   background-color: #445a69;
+}
+
+.bg-dark-1 {
+   background-color: #2a2a2a;
+}
+
+.bg-primary-light {
+   background-color: #ffece5;
+}
+
+.bg-light-1 {
+   background-color: #f8f8f8;
+}
+.bg-light-3 {
+   background-color: #f0f3ec;
+}
+
+.bg-light-4 {
+   background-color: #f3f3f3;
+}
+
+.bg-light-5 {
+   background-color: #F8FAFE;
+}
+
+
+/* ------------------------
+# Shadow
+------------------------*/
+.shadow-primary {
+   -webkit-box-shadow: 0 8px 16px rgba(248, 84, 56, .15);
+   box-shadow: 0 8px 16px rgba(248, 84, 56, .15);
+}
+
+.shadow-sm {
+   box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+}
+
+.shadow {
+   box-shadow: 0 10px 45px 5px rgba(0, 0, 0, .15);
+}
+
+.shadow-lg {
+   box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+}
+
+.shadow-none {
+   box-shadow: none;
+}
+
+
+/* ------------------------
+# Scrollbar
+------------------------*/
+::-webkit-scrollbar {
+   width: 8px ;
+}
+
+::-webkit-scrollbar-track {
+   background: #ebebeb;
+}
+
+::-webkit-scrollbar-thumb {
+   background: $s_color;
+   @include transition();
+}

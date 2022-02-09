@@ -1,0 +1,41 @@
+/* ------------------------
+# Partner
+------------------------*/
+.xg-partner{
+
+  .xg-partner-bordered .xg-partner-item {
+    margin: 0 -1px -1px 0;
+    border: #eaeaea 1px solid;
+    padding: 20px 20px;
+  }
+
+  .xg-partner-item {
+    @include flex(0 0 20%);
+    max-width: 20%;
+    @include flexbox();
+    @include justify-content(center);
+
+    @media #{$max767} {
+      @include flex(0 0 50%);
+      max-width: 50%;
+    }
+    @media #{$max375} {
+      @include flex(0 0 100%);
+      max-width: 100%;
+    }
+
+    img {
+      opacity: .6;
+      transition: all .3s ease-in-out;
+    }
+  }
+}
+
+.xg-partner-item img:hover,
+.xg-partner-item a:hover img,
+.xg-partner-item .inside:hover img {
+  opacity: 1;
+}
+
+
+

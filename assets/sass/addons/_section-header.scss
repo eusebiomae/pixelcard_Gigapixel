@@ -1,0 +1,90 @@
+/* ------------------------
+# Section Header
+------------------------*/
+.xg-section-header{
+  margin-bottom: 40px;
+  position: relative;
+
+  &.mb-30{
+    margin-bottom: 30px;
+  }
+  &.mb-20{
+    margin-bottom: 20px;
+  }
+  &.mb-60{
+    margin-bottom: 60px;
+  }
+
+  .xg-section-meta{
+    color: $p_color;
+    letter-spacing: 1px;
+  }
+
+  .xg-short-title{
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $p_color;
+    margin-bottom: 5px;
+  }
+
+  .xg-section-title{
+    font-size: 52px;
+    line-height: 60px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    color: $s_color;
+
+    @media #{$max575} {
+      font-size: 42px;
+      line-height: 50px;
+    }
+    @media #{$max480} {
+      font-size: 36px;
+    }
+
+    &.font-36{
+      font-size: 36px;
+      line-height: 42px;
+      letter-spacing: 0;
+
+      @media #{$max575} {
+        font-size: 30px;
+        line-height: 40px;
+      }
+    }
+  }
+
+  .xg-text-big{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 100px;
+    line-height: 140px;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(0,0,0, 0.4);
+    opacity: .3;
+
+    @media #{$max767} {
+      font-size: 80px;
+      line-height: 120px;
+    }
+    @media #{$max575} {
+      font-size: 70px;
+      line-height: 110px;
+    }
+    @media #{$max480} {
+      font-size: 60px;
+      line-height: 100px;
+    }
+    @media #{$max320} {
+      font-size: 50px;
+      line-height: 90px;
+    }
+  }
+}

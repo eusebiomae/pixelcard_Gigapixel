@@ -1,0 +1,178 @@
+/* ------------------------
+# About
+------------------------*/
+.xg-about-section{
+
+  .xg-about-image{
+    width: 300px;
+    height: 300px;
+    position: relative;
+
+    .xg-about-video{
+      position: absolute;
+      right: 18px;
+      bottom: 18px;
+      background: $p_color;
+      color: #fff;
+      height: 60px;
+      width: 60px;
+      line-height: 60px;
+      text-align: center;
+      border-radius: 100%;
+      z-index: 1;
+
+      @media #{$max991} {
+        right: 10px;
+        bottom: 10px;
+      }
+      @media #{$max375} {
+        right: 20px;
+        bottom: 20px;
+      }
+
+      i{
+        margin-left: 3px;
+      }
+
+      .icon-after,
+      .icon-before {
+        position: absolute;
+        border-radius: 50%;
+        z-index: -1;
+        background-color: $p_color;
+      }
+
+      .icon-before {
+        transform: scale(1);
+        top: -20px;
+        left: -20px;
+        right: -20px;
+        bottom: -20px;
+        opacity: 0.1;
+      }
+
+      .icon-after {
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        opacity: 0.2;
+      }
+
+      &:hover{
+        .icon-before {
+          -webkit-animation: 1s xg-pulse-paused 0.2s ease-in infinite;
+          animation: 1s xg-pulse-paused 0.2s ease-in infinite;
+        }
+
+        .icon-after {
+          -webkit-animation: xg-pulse-paused 1s ease-in infinite;
+          animation: xg-pulse-paused 1s ease-in infinite;
+        }
+      }
+    }
+
+    @media #{$max1199} {
+      width: 100%;
+      height: auto;
+    }
+
+    @media #{$max767} {
+      width: 50%;
+      margin: 0 auto 40px !important;
+    }
+
+    @media #{$max375} {
+      width: 100%;
+    }
+  }
+
+  .xg-personal-info{
+
+    @media #{$max767} {
+      margin-bottom: 40px;
+      ul{
+        column-count: 2;
+        column-gap: 30px;
+      }
+    }
+
+    @media #{$max375} {
+      ul{
+        column-count: 1;
+        column-gap: 0;
+      }
+    }
+
+    ul li{
+      margin-bottom: 5px;
+
+      span{
+        font-weight: 700;
+        color: $p_color;
+        display: inline-block;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .progress-item{
+    &:not(:last-child){
+      margin-bottom: 22px;
+    }
+
+    .progress-item-head{
+      @include flexbox();
+      @include justify-content(space-between);
+
+      h6{
+        margin-bottom: 2px;
+      }
+    }
+
+    .progress {
+      height: 10px;
+      border-radius: 0;
+      background-color: $s_color;
+    }
+  }
+
+}
+.progress-bar {
+  position: relative;
+  background-color: $p_color;
+  -moz-transition: ease all 0.55s;
+  -o-transition: ease all 0.55s;
+  -webkit-transition: ease all 0.55s;
+  transition: ease all 0.55s;
+  width: 0;
+}
+.pp-section .progress-bar{
+  background: transparent;
+}
+.progress-bar:before {
+  position: absolute;
+  background: $p_color;
+  content: '';
+  width: 0;
+  border-radius: 0;
+  height: 100%;
+}
+
+.progress-item:nth-child(1) .progress-bar:before {
+  transition-delay: 400ms;
+}
+.progress-item:nth-child(2) .progress-bar:before {
+  transition-delay: 600ms;
+}
+.progress-item:nth-child(3) .progress-bar:before {
+  transition-delay: 800ms;
+}
+.progress-item:nth-child(4) .progress-bar:before {
+  transition-delay: 1000ms;
+}
+
+.active .progress-bar:before {
+  width: 100%;
+  transition: all .8s ease;
+}

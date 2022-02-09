@@ -1,0 +1,76 @@
+/*-------------------------------------
+Template Name: Karl
+Author: Xpertgallery
+Description: Personal Portfolio Template
+Version: 1.0.0
+Tags: personal portfolio, blog, business, creative, cv theme, online resume, personal, portfolio, professional cv, responsive portfolio, resume, resume theme
+-------------------------------------*/
+/*-------------------------------------
+  Table of Content
+---------------------------------------
+
+  # Body
+  # Transition
+  # Font Weight
+  # Alignment
+  # Text Color
+  # Background
+  # Shadow
+  # Scrollbar
+  # PreLoader
+  # Button
+  # Spacing
+  # Page-pilling
+  # Cursor
+  # Text Splitting
+  # Header
+  # Section Header
+  # Banner
+  # About
+  # Portfolio
+    * Grid Portfolio
+  # Experience
+  # Partner
+  # Service
+  # Work Process
+  # Pricing
+  # Blog
+    * Post Meta
+    * Pagination
+  # Contact
+  # Sidebar
+  # Blog Single
+    * Post Tag
+    * Post Social Share
+    * Post Author
+    * Comment List
+    * Comment Form
+
+-------------------------------------*/
+
+@import 'global/variable';
+@import 'global/mixin';
+@import 'global/reset';
+@import 'global/preloader';
+@import 'global/button';
+@import 'global/global';
+@import 'global/header';
+
+@import 'addons/section-header';
+@import 'addons/banner';
+@import 'addons/about';
+@import 'addons/portfolio';
+@import 'addons/experience';
+@import 'addons/partner';
+@import 'addons/service';
+@import 'addons/work-process';
+@import 'addons/pricing';
+@import 'addons/blog';
+@import 'addons/contact';
+
+//widgets
+@import 'global/widgets';
+
+//pages
+@import 'pages/blog-single';
+@import 'pages/demo';

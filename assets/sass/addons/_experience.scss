@@ -1,0 +1,60 @@
+/* ------------------------
+# Experience
+------------------------*/
+.xg-experience{
+
+  .xg-experience-main .xg-section-header{
+    margin-bottom: 0;
+
+    .xg-experience-prev,
+    .xg-education-prev,
+    .xg-experience-next,
+    .xg-education-next{
+      outline: none;
+      cursor: pointer;
+
+      i{
+        font-size: 20px;
+      }
+    }
+  }
+
+  .xg-timeline-item{
+
+    .xg-timeline-top{
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(space-between);
+
+      @media #{$max480} {
+        @include flex-direction(column);
+        @include align-items(flex-start);
+        margin-bottom: 5px;
+      }
+
+      h6{
+        font-size: 16px;
+        padding: 3px 10px;
+        background: $p_color;
+        color: #fff;
+        font-weight: 600;
+        line-height: 20px;
+        border-radius: 3px;
+
+        @media #{$max480} {
+          margin-top: 5px;
+        }
+      }
+    }
+
+    p{
+      margin-bottom: 0;
+    }
+  }
+  
+  @media #{$max991} {
+    .xg-experience-slider{
+      margin-bottom: 50px;
+    }
+  }
+}

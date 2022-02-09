@@ -1,0 +1,113 @@
+/* ------------------------
+# Work Process
+------------------------*/
+.xg-process-wrap {
+  overflow: hidden;
+  display: table;
+  table-layout: fixed;
+  text-align: center;
+
+  .xg-process-item{
+    padding: 0 15px;
+    display: table-cell;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+
+    @media #{$max991} {
+      display: inline-block;
+      max-width: 300px;
+      margin-bottom: 40px;
+
+      &:nth-child(even){
+        .xg-pro-step::after{
+          display: none;
+        }
+      }
+      &:nth-child(2n+1){
+        .xg-pro-step::before{
+          display: none;
+        }
+      }
+    }
+
+    .xg-pro-step{
+      height: 90px;
+      width: 90px;
+      line-height: 90px;
+      border: 1px solid $p_color;
+      font-size: 28px;
+      font-weight: 600;
+      color: $p_color;
+      margin-bottom: 20px;
+      display: inline-block;
+      position: relative;
+      @include transition();
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      z-index: 1;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        top: 50%;
+        background: $p_color;
+        width: 100%;
+        z-index: -1;
+        margin: 0;
+
+        @media #{$max991} {
+          width: 120%;
+        }
+        @media #{$max767} {
+          display: none;
+        }
+      }
+
+      &::before {
+        left: -100%;
+
+        @media #{$max991} {
+          left: -120%;
+        }
+      }
+
+      &::after {
+        right: -100%;
+
+        @media #{$max991} {
+          right: -120%;
+        }
+      }
+    }
+
+    &:hover{
+
+      .xg-pro-step {
+        background: $p_color;
+        color: #fff;
+      }
+    }
+
+    &:first-child .xg-pro-step::before,
+    &:last-child .xg-pro-step::after {
+      display: none;
+    }
+
+    &.active .xg-pro-step{
+      background: $p_color;
+      color:#fff;
+    }
+  }
+}
+
+.xg-process-wrap:hover li.active>.xg-pro-step{
+  color:$p_color;
+  background: transparent;
+}
+.xg-process-wrap:hover li.active:hover .xg-pro-step{
+  color: #fff;
+  background: $p_color;
+}

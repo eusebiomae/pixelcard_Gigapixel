@@ -1,0 +1,57 @@
+/* ------------------------
+# Contact
+------------------------*/
+.xg-contact{
+
+  .xg-contact-infos{
+
+    .xg-contact-item{
+      border:1px solid #d6d6d6;
+      padding: 22px 20px;
+      overflow: hidden;
+      margin-bottom: 27px;
+
+      .xg-contact-icon{
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        border-radius: 100%;
+        background: $p_color;
+        float: left;
+        text-align: center;
+        margin-right: 20px;
+
+        i:before{
+          color:#fff;
+        }
+      }
+
+      .xg-contact-content{
+        display: table;
+
+        h5{
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  .xg-contact-form{
+
+    .form-group{
+      margin-bottom: 20px;
+    }
+
+    .form-control{
+      border-radius: 0;
+      padding: 10px 15px;
+      height: auto;
+      line-height: 1.5;
+
+      &:focus{
+        box-shadow: none;
+        border-color: $p_color;
+      }
+    }
+  }
+}
